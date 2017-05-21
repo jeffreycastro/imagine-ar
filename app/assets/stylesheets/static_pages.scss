@@ -1,0 +1,299 @@
+// Place all the styles related to the StaticPages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/* universal */
+body {
+  padding-top: 60px;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+}
+
+.center h1 {
+  margin-bottom: 10px;
+}
+
+
+/* header */
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-weight: bold;
+}
+
+#logo:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.header-container h3 {
+  color: #fff;
+  float: left;
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
+#navlinks > li > a {
+  color: #fff;
+  &:hover {
+    background-color: #f18a38;
+  }
+}
+
+.navbar {
+  border: none !important;
+}
+
+.navbar .nav > li > a {
+  line-height: 30px;
+}
+
+.navbar-brand {
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+}
+
+
+/* footer */
+.footer {
+  border-left: none !important;
+  border-right: none !important;
+  border-bottom: none !important;
+  border-style: solid;
+  border-top-color: #f18a38 !important;
+  border-top-width: 4px;
+}
+
+.footer-container {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.footer h5 {
+  color: #fff;
+}
+
+.footer .contact {
+  float: right;
+}
+
+.footer .copyright {
+  display: inline-block;
+}
+
+
+/* main content */
+.main-content-container {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+  background-color : transparent;
+}
+
+#learnmore-div {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 650px;
+  background-image:    url('background.png');
+  background-size:     cover;
+  background-repeat:   no-repeat;
+  background-position: center center;
+}
+
+#learnmore-div > .center {
+  display: table;
+  margin: 0 auto;
+}
+
+#learnmore-div .jumbotron {
+  background-color : transparent;
+}
+
+.learnmore-title h1 {
+  color: #fff !important;
+  font-size: 5em;
+  font-weight: 900;
+}
+
+.learnmore-link {
+  font-size: 2em !important;
+  font-weight: 900 !important;
+  padding: 30px 30px 30px 30px !important;
+  margin-top: 50px;
+  background-color: #00aeef !important;
+  border-color: #00aeef !important;
+  &:hover {
+    background-color: #286090 !important;
+    border-color: #286090 !important;
+  }
+}
+
+#imagineers-div {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 650px;
+  background-color:    #0e75c7;
+  background-size:     cover;
+  background-repeat:   no-repeat;
+  background-position: center center;
+}
+
+#imagineers-div > .center {
+  display: table;
+  margin: 0 auto;
+}
+
+#imagineers-div .jumbotron {
+  background-color : transparent;
+}
+
+#imagineers-div p {
+  margin-bottom: 0px;
+  font-size: 2.5em;
+  line-height: 1.1;
+  font-weight: 100;
+}
+
+.imagineers-title {
+  display: flex;
+  align-items: center;
+}
+
+.weare {
+  display: flex;
+  align-items: center;
+  margin: auto;
+}
+
+.weare h1 {
+  color: #fff;
+  font-size: 5em;
+  display: inline-block;
+}
+
+#whatwedo-div {
+  display: flex;
+  width: 100%;
+  background-color:    #fff;
+  background-size:     cover;
+  background-repeat:   no-repeat;
+  background-position: center center;
+}
+
+#whatwedo-div .jumbotron {
+  background-color : transparent;
+}
+
+.whatwedo-title h1 {
+  color: #0e75c7;
+  font-size: 5em;
+  display: inline-block;
+}
+
+#augreality-div {
+  display: flex;
+  width: 100%;
+  height: 350px;
+  background: #7d56ca; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(-90deg, #7f55ca, #0e75c7); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(-90deg, #7f55ca, #0e75c7); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(-90deg, #7f55ca, #0e75c7); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(-90deg, #7f55ca, #0e75c7); /* Standard syntax (must be last) */
+  background-size:     cover;
+  background-repeat:   no-repeat;
+  background-position: center center;
+}
+
+#augreality-div > .center {
+  display: table;
+  margin: 0 auto;
+}
+
+#augreality-div .jumbotron {
+  background-color : transparent;
+}
+
+.augreality-title h1 {
+  color: #fff;
+  font-size: 5em;
+  font-weight: 100;
+  display: inline-block;
+}
+
+#augreality-div p {
+  color: #fff;
+  margin-top: 70px;
+  margin-bottom: 0px;
+  font-size: 2em;
+  line-height: 1.1;
+  font-weight: 100;
+}
+
+#media-div {
+  display: flex;
+  width: 100%;
+  max-height: 600px;
+  background-color:    #fff;
+  background-size:     cover;
+  background-repeat:   no-repeat;
+  background-position: center center;
+}
+
+#media-div > .center {
+  display: table;
+  margin: 0 auto;
+}
+
+#media-div .jumbotron {
+  background-color : transparent;
+}
+
+#videoframe {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+   
+.yt-container {
+   position: relative;
+   padding-bottom: 56.25%; /* 16:9 */
+   height: 0;
+   overflow:hidden;
+}
+
+.yt-video {
+   position: absolute;
+   top: 5%;
+   left: 25%;
+   width: 50%;
+   height: 50%;
+}
+
+#media-desc-div {
+  padding-bottom: 50px;
+}
+
+#media-desc-div p {
+  color: #818181;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: 2em;
+  line-height: 1.1;
+  font-weight: 100;
+}

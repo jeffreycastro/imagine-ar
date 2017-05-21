@@ -1,0 +1,83 @@
+// Place all the styles related to the StaticPages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/* window size responses */
+@media (max-width: 1600px) {
+  .yt-video {
+    position: absolute;
+    top: 5%;
+    left: 15%;
+    width: 70%;
+    height: 70%;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer .contact {
+    float: none;
+    padding-top: 5px;
+  }
+
+  .header-container h3 {
+    font-size: 1.2em;
+    line-height: 30px;
+  }
+
+  #learnmore-div {
+    height: 400px;
+  }
+
+  .learnmore-title h1 {
+    font-size: 3em;
+  }
+
+  .learnmore-link {
+    font-size: 1.5em !important;
+  }
+
+  #imagineers-div {
+    height: 400px;
+  }
+
+  #imagineers-div p {
+    font-size: 1.5em;
+  }
+
+  .weare h1 {
+    font-size: 1.5em;
+  }
+
+  .whatwedo-title h1 {
+    font-size: 2.5em;
+  }
+
+  #augreality-div {
+    height: 320px;
+  }
+
+  #augreality-div p {
+    font-size: 1.5em;
+  }
+
+  .augreality-title h1 {
+    font-size: 3em;
+  }
+
+  #media-div {
+    height: auto;
+    padding-bottom: 50px;
+  }
+
+  #media-desc-div p {
+    font-size: 1.5em;
+  }
+
+  .yt-video {
+    position: absolute;
+    top: 5%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+  }
+}

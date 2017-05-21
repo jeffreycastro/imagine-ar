@@ -1,0 +1,28 @@
+%nav.navbar.navbar-fixed-top.navbar-inverse{:role => "navigation"}
+  .container-fluid.header-container
+    .navbar-header
+      %button.navbar-toggle.collapsed{"data-target" => "#bs-example-navbar-collapse-6", "data-toggle" => "collapse", :type => "button"}
+        %span.sr-only Toggle navigation
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      %a.navbar-brand{:href => root_path}
+        %span= image_tag("ladyBug_stroked.png", size: 60)
+      %h3.navbar-text= link_to "i M a g e s B l u e s", root_path
+    #bs-example-navbar-collapse-6.collapse.navbar-collapse
+      %ul.nav.navbar-nav.navbar-right#navlinks
+        %li
+          = link_to "ABOUT", "#imagineers-div"
+        %li
+          = link_to "WORK", "#whatwedo-div"
+        %li
+          = link_to "CONTACT", "#"
+
+:javascript
+  var $root = $('html, body');
+  $('#navlinks a').click(function() {
+      $root.animate({
+        scrollTop: $( $.attr(this, 'href') ).offset().top - 50
+      }, 500);
+      return false;
+  });
