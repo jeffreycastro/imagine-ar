@@ -1,0 +1,46 @@
+.col-xs-12#contact-us
+  .center.contact-us-title
+    %p{style: "display: inline;"}
+      = "GET IN TOUCH"
+    .pull-right{style: "display: inline;"}
+      = link_to image_tag("top.png", class: "to-top"), ""
+  .row
+  .col-sm-12.col-md-6.contact-us-form
+    = "FORM HERE"
+  .col-sm-12.col-md-6.contact-us-details
+    %p.part1
+      = "We are accepting new projects."
+    %br/
+    %p
+      = "Tell us about your app idea, hosting inquiry, or"
+    %p
+      = "project quotation by sending us an email at"
+    %p.email
+      = "info@imagine-ar.com"
+    %br/
+    %p.imaginear-title
+      = "imagineAR"
+
+    .address-details
+      .row
+      .col-sm-1.no-padding-left.no-padding-right
+        = image_tag("location_bullet.png")
+      .col-sm-11.no-padding-left{style: "margin-bottom: 20px;"}
+        %p= "Lot 5 Block 17 Arquiza Street,"
+        %p= "Phase 2B Ciudad Real Subdivision"
+        %p= "San Jose del Monte City, Bulacan"
+        %p= "Philippines"
+
+    .phone-details
+      .row
+      .col-sm-1.no-padding-left.no-padding-right
+        = image_tag("phone_bullet.png")
+      .col-sm-11.no-padding-left{style: "margin-bottom: 20px;"}
+        %p= "(02) 351-7393"
+
+    .email-details
+      .row
+      .col-sm-1.no-padding-left.no-padding-right
+        = image_tag("email_bullet.png")
+      .col-sm-11.no-padding-left{style: "margin-bottom: 20px;"}
+        %p.email= "info@imagine-ar.com"

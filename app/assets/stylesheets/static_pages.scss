@@ -3,7 +3,22 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 /* universal */
+
+@font-face {
+  font-family: 'Avenir';
+  src: font-url('avenir.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  font-family: 'Avenir', serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
 body {
+  font-family: 'Avenir', serif !important;
   padding-top: 60px;
 }
 
@@ -23,21 +38,37 @@ textarea {
   margin-bottom: 10px;
 }
 
+.no-padding-left {
+  padding-left: 0px !important;
+}
+
+.no-padding-right {
+  padding-right: 0px !important;
+}
+
 
 /* header */
+.navbar-fixed-top {
+  position: absolute !important;
+  top: -320px !important;
+}
+
 #logo {
-  float: left;
-  margin-right: 10px;
-  font-size: 1.7em;
-  color: #fff;
-  text-transform: uppercase;
-  letter-spacing: -1px;
-  font-weight: bold;
+  margin-top: 5px;
 }
 
 #logo:hover {
   color: #fff;
   text-decoration: none;
+}
+
+.header-container {
+  padding-left: 40px !important;
+  padding-right: 40px !important;
+}
+
+#imagine-ar-navbar {
+  border-bottom: 2px solid rgba(255,255,255,0.2);
 }
 
 .header-container h3 {
@@ -50,9 +81,10 @@ textarea {
 }
 
 #navlinks > li > a {
+  font-size: 18px;
   color: #fff;
   &:hover {
-    background-color: #f18a38;
+    background-color: #0074c8;
   }
 }
 
@@ -105,23 +137,26 @@ textarea {
   background-color : transparent;
 }
 
-#learnmore-div {
+
+/* learnmore */
+#learnmore {
+  margin-top: -60px;
   display: flex;
   align-items: center;
   width: 100%;
-  height: 650px;
+  height: 1100px;
   background-image:    url('background.png');
   background-size:     cover;
   background-repeat:   no-repeat;
   background-position: center center;
 }
 
-#learnmore-div > .center {
+#learnmore > .center {
   display: table;
   margin: 0 auto;
 }
 
-#learnmore-div .jumbotron {
+#learnmore .jumbotron {
   background-color : transparent;
 }
 
@@ -129,6 +164,7 @@ textarea {
   color: #fff !important;
   font-size: 5em;
   font-weight: 900;
+  text-align: left;
 }
 
 .learnmore-link {
@@ -136,164 +172,224 @@ textarea {
   font-weight: 900 !important;
   padding: 30px 30px 30px 30px !important;
   margin-top: 50px;
-  background-color: #00aeef !important;
-  border-color: #00aeef !important;
+  background-color: #000000 !important;
+  border-color: #000000 !important;
   &:hover {
-    background-color: #286090 !important;
-    border-color: #286090 !important;
+    background-color: #0074c8 !important;
+    border-color: #0074c8 !important;
   }
 }
 
-#imagineers-div {
+
+/* ar carousel */
+#ar-carousel {
   display: flex;
   align-items: center;
   width: 100%;
-  height: 650px;
-  background-color:    #0e75c7;
+  padding-top: 30px;
+  padding-bottom: 100px;
+  background-color:    #ffffff;
   background-size:     cover;
   background-repeat:   no-repeat;
   background-position: center center;
 }
 
-#imagineers-div > .center {
+#ar-carousel > .center {
   display: table;
   margin: 0 auto;
 }
 
-#imagineers-div .jumbotron {
+#ar-carousel .jumbotron {
   background-color : transparent;
 }
 
-#imagineers-div p {
+
+#ar-carousel .carousel-caption-title {
   margin-bottom: 0px;
-  font-size: 2.5em;
-  line-height: 1.1;
-  font-weight: 100;
+  font-size: 2.0em;
+  line-height: 1.7;
 }
 
-.imagineers-title {
-  display: flex;
-  align-items: center;
+#ar-carousel .carousel-caption-desc {
+  margin-bottom: 0px;
+  font-size: 1.125em;
+  line-height: 1.7;
 }
 
-.weare {
-  display: flex;
-  align-items: center;
-  margin: auto;
+.carousel-img {
+  width: 100%;
 }
 
-.weare h1 {
-  color: #fff;
-  font-size: 5em;
-  display: inline-block;
+#ar-carousel hr {
+  border-top: 5px solid #0074c8;
+  border-radius: 25px;
 }
 
-#whatwedo-div {
+
+/* social */
+#social {
   display: flex;
   width: 100%;
-  background-color:    #fff;
-  background-size:     cover;
-  background-repeat:   no-repeat;
-  background-position: center center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background: #ffffff; /* For browsers that do not support gradients */
 }
 
-#whatwedo-div .jumbotron {
-  background-color : transparent;
-}
-
-.whatwedo-title h1 {
-  color: #0e75c7;
-  font-size: 5em;
-  display: inline-block;
-}
-
-#augreality-div {
-  display: flex;
-  width: 100%;
-  height: 350px;
-  background: #7d56ca; /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(-90deg, #7f55ca, #0e75c7); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(-90deg, #7f55ca, #0e75c7); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(-90deg, #7f55ca, #0e75c7); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(-90deg, #7f55ca, #0e75c7); /* Standard syntax (must be last) */
-  background-size:     cover;
-  background-repeat:   no-repeat;
-  background-position: center center;
-}
-
-#augreality-div > .center {
+#social > .center {
   display: table;
   margin: 0 auto;
 }
 
-#augreality-div .jumbotron {
+#social .jumbotron {
   background-color : transparent;
 }
 
-.augreality-title h1 {
-  color: #fff;
-  font-size: 5em;
-  font-weight: 100;
+#social p {
+  font-size: 1.125em;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+#social hr {
+  border-top: 1px solid #cccccc;
+  border-radius: 25px;
+  &.black {
+    border-top: 1px solid #000000;
+  }
+}
+
+.blog-date-posted {
+  color: #ccc;
+  font-size: 0.75em;
+}
+
+#blog {
+  padding-right: 30px;
+}
+
+#follow {
+  border-left: 1px solid #000000;
+  padding-left: 30px;
+}
+
+.blog-title {
+  font-size: 1.5em;
+  font-weight: 900;
+  color: #0074c8;
+}
+
+.blog-cover-image {
+  margin-bottom: 30px;
+}
+
+.blog-social-links a img {
+  margin-bottom: 5px;
+}
+
+.blog-navigation a {
+  color: #0074c8;
+  font-size: 1.125em;
+  font-weight: 900;
+}
+
+.follow-title {
+  font-size: 1.5em;
+  color: #999999;
+}
+
+.follow-social-links a img {
+  margin-bottom: 5px;
+}
+
+
+/* about-us */
+#about-us .turtle {
+  width: 100%;
+}
+
+.about-us-title {
+  line-height: 2em;
+}
+
+.about-us-title p {
+  font-size: 5em !important;
+}
+
+.about-us-title .imagineers {
+  font-size: 5em !important;
+  font-weight: 900;
+  color: #0074c8;
   display: inline-block;
 }
 
-#augreality-div p {
-  color: #fff;
-  margin-top: 70px;
-  margin-bottom: 0px;
+.about-us-body {
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+
+.about-us-body p {
+  line-height: 1.7;
+  color: #777777;
+}
+
+.contact-us {
+  margin-bottom: 50px;
+}
+
+.contact-us a {
   font-size: 2em;
-  line-height: 1.1;
-  font-weight: 100;
 }
 
-#media-div {
-  display: flex;
-  width: 100%;
-  max-height: 600px;
-  background-color:    #fff;
-  background-size:     cover;
-  background-repeat:   no-repeat;
-  background-position: center center;
+
+/* contact-us */
+#contact-us {
+  background: #337ab7;
+  color: #ffffff;
 }
 
-#media-div > .center {
-  display: table;
-  margin: 0 auto;
-}
-
-#media-div .jumbotron {
-  background-color : transparent;
-}
-
-#videoframe {
+.contact-us-title {
+  font-size: 3em;
   margin-top: 50px;
   margin-bottom: 50px;
 }
-   
-.yt-container {
-   position: relative;
-   padding-bottom: 56.25%; /* 16:9 */
-   height: 0;
-   overflow:hidden;
-}
 
-.yt-video {
-   position: absolute;
-   top: 5%;
-   left: 25%;
-   width: 50%;
-   height: 50%;
-}
-
-#media-desc-div {
-  padding-bottom: 50px;
-}
-
-#media-desc-div p {
-  color: #818181;
-  margin-top: 0px;
+.contact-us-details p {
+  font-size: 1.125em;
   margin-bottom: 0px;
+  color: #72bef6;
+}
+
+.contact-us-details .part1 {
+  color: #ffffff;
+}
+
+.contact-us-details .email {
+  color: #ffffff;
+}
+
+.contact-us-details .imaginear-title {
   font-size: 2em;
-  line-height: 1.1;
-  font-weight: 100;
+  color: #ffffff;
+}
+
+.address-details p, .phone-details p, .email-details p {
+  margin-left: -30px;
+}
+
+
+/* partners */
+#partners {
+  margin-top: 30px;
+  margin-bottom: 200px;
+}
+
+.partners-title {
+  color: #777777;
+  font-size: 2em;
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+
+#partners img {
+  max-width: 100%;
 }
