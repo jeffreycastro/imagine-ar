@@ -11,19 +11,24 @@
     #imagine-ar-navbar.collapse.navbar-collapse
       %ul.nav.navbar-nav.navbar-right#navlinks
         %li
-          = link_to "SERVICES", "#"
+          = link_to "SERVICES", "#ar-carousel"
         %li
-          = link_to "NEWS", "#"
+          = link_to "NEWS", "#social"
         %li
-          = link_to "ABOUT", "#"
+          = link_to "ABOUT", "#we-are-imagineers"
         %li
-          = link_to "CONTACT", "#"
+          = link_to "CONTACT", "#contact-us"
 
 :javascript
   var $root = $('html, body');
   $('#navlinks a').click(function() {
       $root.animate({
-        scrollTop: $( $.attr(this, 'href') ).offset().top - 50
+        scrollTop: $( $.attr(this, 'href') ).offset().top
       }, 500);
+
+      $('#navlinks a').each(function(i,obj) {
+        $(obj).removeClass('active');
+      });
+      $(this).addClass('active');
       return false;
   });

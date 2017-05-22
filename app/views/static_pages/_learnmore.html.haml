@@ -4,4 +4,13 @@
     .center.jumbotron
       .learnmore-title
         %h1= "Your ideas brought to life through AR."
-        = link_to "Learn More", "", class: "btn btn-lg btn-primary learnmore-link"
+        = link_to "Learn More", "#ar-carousel", class: "btn btn-lg btn-primary learnmore-link"
+
+:javascript
+  var $root = $('html, body');
+  $('.learnmore-link').click(function() {
+      $root.animate({
+        scrollTop: $( $.attr(this, 'href') ).offset().top
+      }, 500);
+      return false;
+  });

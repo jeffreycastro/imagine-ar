@@ -83,6 +83,9 @@ textarea {
 #navlinks > li > a {
   font-size: 18px;
   color: #fff;
+  &.active {
+    background-color: #0074c8;
+  }
   &:hover {
     background-color: #0074c8;
   }
@@ -103,13 +106,14 @@ textarea {
 
 
 /* footer */
-.footer {
+.footer .copyright {
+  padding-top: 40px;
   border-left: none !important;
   border-right: none !important;
   border-bottom: none !important;
   border-style: solid;
-  border-top-color: #f18a38 !important;
-  border-top-width: 4px;
+  border-top-color: #cccccc !important;
+  border-top-width: 2px;
 }
 
 .footer-container {
@@ -118,15 +122,13 @@ textarea {
 }
 
 .footer h5 {
-  color: #fff;
+  color: #aaaaaa;
 }
 
-.footer .contact {
-  float: right;
-}
-
-.footer .copyright {
+.footer .copyright p {
+  font-size: 2em;
   display: inline-block;
+  margin-right: 50px;
 }
 
 

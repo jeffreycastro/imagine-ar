@@ -44,3 +44,11 @@
         = image_tag("email_bullet.png")
       .col-sm-11.no-padding-left{style: "margin-bottom: 20px;"}
         %p.email= "info@imagine-ar.com"
+
+:javascript
+  $('.to-top').click(function() {
+      $root.animate({
+        scrollTop: 0
+      }, 500);
+      return false;
+  });
