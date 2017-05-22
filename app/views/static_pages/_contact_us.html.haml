@@ -4,9 +4,11 @@
       = "GET IN TOUCH"
     .pull-right{style: "display: inline;"}
       = link_to image_tag("top.png", class: "to-top"), ""
+
   .row
   .col-sm-12.col-md-6.contact-us-form
-    = "FORM HERE"
+    = render 'contact_us_form'
+
   .col-sm-12.col-md-6.contact-us-details
     %p.part1
       = "We are accepting new projects."

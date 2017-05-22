@@ -347,6 +347,7 @@ textarea {
 #contact-us {
   background: #337ab7;
   color: #ffffff;
+  padding-bottom: 50px;
 }
 
 .contact-us-title {
@@ -356,7 +357,7 @@ textarea {
 }
 
 .contact-us-details p {
-  font-size: 1.125em;
+  font-size: 1.5em;
   margin-bottom: 0px;
   color: #72bef6;
 }
@@ -378,6 +379,22 @@ textarea {
   margin-left: -30px;
 }
 
+.contact-us-send {
+  background: #000000 !important;
+  color: #ffffff !important;
+  border: none !important;
+  font-size: 2em !important;
+  &:hover {
+    background: #ffffff !important;
+    color: #000000 !important;
+    border-color: #000000 !important;
+  }
+}
+
+.contact-us-form .form-control {
+  font-size: 1.5em !important;
+}
+
 
 /* partners */
 #partners {
@@ -389,6 +406,10 @@ textarea {
   color: #777777;
   font-size: 2em;
   font-weight: 900;
+  margin-bottom: 20px;
+}
+
+.partner-logo {
   margin-bottom: 20px;
 }
 

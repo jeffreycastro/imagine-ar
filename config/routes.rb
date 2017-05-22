@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   resources :static_pages, only: [], path: '/' do
     collection do
       get :home
+      post :send_email
     end
   end
 
