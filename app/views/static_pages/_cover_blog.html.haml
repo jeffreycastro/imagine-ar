@@ -7,26 +7,13 @@
 .blog-body
   %p
     = truncate(simple_format(@cover_blog.content), escape: false, length: 340) rescue ""
-  / %p
-  /   = "A team of talented Computer Science students from the University of the Philippines Diliman, and direct affiliates of imagineAR's core dev-team has acquired \"People's Choice\" Award as they finished their project in their Software Development course. These young programmers were allegedly behind building imagineAR's augmented reality app."
-  / %p
-  /   = "Though they have mentioned that their journey didn't go smoothly and had their hardships at the beginning of the course. They even doubted their own aptitude and almost gave up. But with just few sleep-overs and tutorials on AR, they got the ball up and rolling."
-  / %p
-  /   = "Not only did they showcase an extraordinary prowess in their coding skills but also demonstrated unprecedented attitude towards their tasks. Putting teamwork and professionality above anything else, they have successfully delivered an amazing product."
-  / %p
-  /   = "Other than People's Choice, they also got the \"Rockstar\" Award for the exceptional quality of their app. Let just us all hope they publish it soon."
 .readmore-link
   = link_to "Read More >>", blog_path(@cover_blog)
 .blog-social-links
   .fb-share-button{ "data-href" => blog_url(@cover_blog), "data-layout" => "button", "data-mobile-iframe" => "true", "data-size" => "large" }
     = link_to "Share", "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&src=sdkpreparse", target: "_blank", class: "fb-xfbml-parse-ignore"
   = link_to "Tweet", "https://twitter.com/intent/tweet?text=Check%20this%20out!&url=#{blog_url(@cover_blog)}", class: "twitter-share-button", "data-size": "large"
-  / .facebook-btn
-  /   .fb-like{"data-action" => "like", "data-href" => "https://www.facebook.com/EnergyForAllInitiative", "data-layout" => "button_count", "data-share" => "true", "data-show-faces" => "false", "data-size" => "small"}
-  / = link_to image_tag("twitter_tweet_btn.png"), "https://twitter.com/intent/tweet?text=thequickborwnfox%20http://www.consonantsolutions.com&lang=en", target: "_blank"
-  / = link_to image_tag("facebook_share_btn.png"), "http://www.facebook.com/dialog/feed?app_id=416926015340372&link=http%3A%2F%2Fimagesblues.com%2F&name=name&caption=caption&description=description&redirect_uri=http%3A%2F%2Fimagesblues.com&picture=http://app-test.energyforall.asia/uploads/account_image/image/account_logo/2/thumb_energyforall_logo.png"
 .row
 %p.blog-date-posted
   = @cover_blog.date_posted rescue ""
-  / = "Posted 13 May 2017"
 %hr.black
