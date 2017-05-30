@@ -14,3 +14,11 @@
   .form-group.row
     .col-md-2.col-md-offset-2
       = f.submit "Send", class: "btn btn-default btn-lg btn-block contact-us-send", type: "submit"
+
+:javascript
+  $("#send_email_form").validate({
+    rules: {
+      'send_email[name]': { required: true },
+      'send_email[email]': { required: true },
+    }
+  });
