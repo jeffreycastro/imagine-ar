@@ -1,34 +1,43 @@
 .col-xs-12
-  .col-xs-12.col-md-6
-    .center
-      = image_tag("carousel1.png", class: "carousel-img")
-    .row
-      .col-xs-4.col-xs-offset-4
-        %hr
-    .center
-      %strong.carousel-caption-title
-        = "AR App Development"
-    .row
-      .col-xs-4.col-xs-offset-4
-        %p.carousel-caption-desc.center
-          = "We help you build the perfect mobile AR app for your business. From enterprise apps to AR games."
-    .center.inquire-btn
-      = link_to "Inquire Now", "#contact-us-top", class: "btn btn-lg btn-primary"
-  .col-xs-12.col-md-6
-    .center
-      = image_tag("carousel2.png", class: "carousel-img")
-    .row
-      .col-xs-4.col-xs-offset-4
-        %hr
-    .center
-      %strong.carousel-caption-title
-        = "AR Hosting"
-    .row
-      .col-xs-4.col-xs-offset-4
-        %p.carousel-caption-desc.center
-          = "We craft compelling AR experiences for your product and make it accessible to all."
-    .center.inquire-btn
-      = link_to "Inquire Now", "#contact-us-top", class: "btn btn-lg btn-primary"
+  .row
+    .col-md-6
+      .center
+        = image_tag("carousel1.png", class: "carousel-img")
+    .col-md-6
+      .center
+        = image_tag("carousel2.png", class: "carousel-img")
+
+  .row
+    .col-md-6
+      .row
+        .col-xs-4.col-xs-offset-4
+          %hr
+    .col-md-6
+      .row
+        .col-xs-4.col-xs-offset-4
+          %hr
+
+  .row.white_gray_gradient
+    .col-md-6
+      .center
+        %strong.carousel-caption-title
+          = "AR App Development"
+      .row
+        .col-xs-4.col-xs-offset-4
+          %p.carousel-caption-desc.center
+            = "We help you build the perfect mobile AR app for your business. From enterprise apps to AR games."
+      .center.inquire-btn
+        = link_to "Inquire Now", "#contact-us-top", class: "btn btn-lg btn-primary"
+    .col-md-6
+      .center
+        %strong.carousel-caption-title
+          = "AR Hosting"
+      .row
+        .col-xs-4.col-xs-offset-4
+          %p.carousel-caption-desc.center
+            = "We craft compelling AR experiences for your product and make it accessible to all."
+      .center.inquire-btn
+        = link_to "Inquire Now", "#contact-us-top", class: "btn btn-lg btn-primary"
 
 :javascript
   $('.inquire-btn a').click(function() {

@@ -1,0 +1,9 @@
+.col-xs-12.white_gray_gradient
+  .col-xs-12
+    .blog-social-links
+      .fb-share-button{ "data-href" => blog_url(@cover_blog), "data-layout" => "button", "data-mobile-iframe" => "true", "data-size" => "large" }
+        = link_to "Share", "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&src=sdkpreparse", target: "_blank", class: "fb-xfbml-parse-ignore"
+      = link_to "Tweet", "https://twitter.com/intent/tweet?text=Check%20this%20out!&url=#{blog_url(@cover_blog)}", class: "twitter-share-button", "data-size": "large"
+    %p.blog-date-posted
+      = @cover_blog.date_posted rescue ""
+    %hr.black

@@ -46,6 +46,14 @@ textarea {
   padding-right: 0px !important;
 }
 
+.white_gray_gradient {
+  background: #ffffff; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(#ffffff, #e5e5e5); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#ffffff, #e5e5e5); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#ffffff, #e5e5e5); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#ffffff, #e5e5e5); /* Standard syntax */
+  padding-bottom: 50px;
+}
 
 /* header */
 .navbar-fixed-top {
@@ -127,7 +135,7 @@ textarea {
 }
 
 .footer-container {
-  padding-top: 20px;
+  padding-top: 50px;
   padding-bottom: 20px;
 }
 
@@ -199,7 +207,7 @@ textarea {
   align-items: center;
   width: 100%;
   padding-top: 30px;
-  padding-bottom: 100px;
+  padding-bottom: 30px;
   background-color:    #ffffff;
   background-size:     cover;
   background-repeat:   no-repeat;
@@ -246,7 +254,6 @@ textarea {
   display: flex;
   width: 100%;
   padding-top: 30px;
-  padding-bottom: 30px;
   background: #ffffff; /* For browsers that do not support gradients */
 }
 
@@ -273,11 +280,19 @@ textarea {
   }
 }
 
-.blog-date-posted {
+#social_two .blog-date-posted {
   color: #ccc;
-  font-size: 0.75em;
+  font-size: 1.125em;
   font-weight: 900;
   margin-top: 50px;
+}
+
+#social_two hr {
+  border-top: 1px solid #cccccc;
+  border-radius: 25px;
+  &.black {
+    border-top: 1px solid #000000;
+  }
 }
 
 #blog {
@@ -377,10 +392,6 @@ textarea {
   color: #777777;
 }
 
-.contact-us {
-  margin-bottom: 50px;
-}
-
 .contact-us a {
   font-size: 2em;
 }
@@ -445,7 +456,7 @@ textarea {
 /* partners */
 #partners {
   margin-top: 30px;
-  margin-bottom: 200px;
+  margin-bottom: 100px;
 }
 
 .partners-title {
