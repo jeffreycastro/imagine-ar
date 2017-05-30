@@ -13,7 +13,7 @@
         %p.carousel-caption-desc.center
           = "We help you build the perfect mobile AR app for your business. From enterprise apps to AR games."
     .center.inquire-btn
-      = link_to "Inquire Now", "#", class: "btn btn-lg btn-primary"
+      = link_to "Inquire Now", "#contact-us-top", class: "btn btn-lg btn-primary"
   .col-xs-12.col-md-6
     .center
       = image_tag("carousel2.png", class: "carousel-img")
@@ -28,4 +28,12 @@
         %p.carousel-caption-desc.center
           = "We craft compelling AR experiences for your product and make it accessible to all."
     .center.inquire-btn
-      = link_to "Inquire Now", "#", class: "btn btn-lg btn-primary"
+      = link_to "Inquire Now", "#contact-us-top", class: "btn btn-lg btn-primary"
+
+:javascript
+  $('.inquire-btn a').click(function() {
+      $root.animate({
+        scrollTop: $( $.attr(this, 'href') ).offset().top
+      }, 500);
+      return false;
+  });
