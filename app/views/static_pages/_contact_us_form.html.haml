@@ -10,7 +10,7 @@
       = f.text_field :company, class: "form-control", type: "text", placeholder: "Your Company"
   .form-group.row
     .col-md-9.col-md-offset-2
-      = f.text_area :message, class: "form-control", type: "textarea", placeholder: "Your Message", rows: 5
+      = f.text_area :message, class: "form-control", type: "textarea", placeholder: "Your Message*", rows: 5
   .form-group.row
     .col-md-2.col-md-offset-2
       = f.submit "Send", class: "btn btn-default btn-lg btn-block contact-us-send", type: "submit"
@@ -20,5 +20,6 @@
     rules: {
       'send_email[name]': { required: true },
       'send_email[email]': { required: true },
+      'send_email[message]': { required: true, minlength: 10 },
     }
   });
