@@ -227,6 +227,9 @@ textarea {
   border-radius: 25px;
 }
 
+.inquire-btn {
+  margin-top: 30px;
+}
 
 /* social */
 #social {
@@ -263,6 +266,8 @@ textarea {
 .blog-date-posted {
   color: #ccc;
   font-size: 0.75em;
+  font-weight: 900;
+  margin-top: 50px;
 }
 
 #blog {
@@ -275,13 +280,18 @@ textarea {
 }
 
 .blog-title {
-  font-size: 1.5em;
+  font-size: 1.75em;
   font-weight: 900;
   color: #0074c8;
 }
 
 .blog-cover-image {
   margin-bottom: 30px;
+}
+
+#blog .readmore-link {
+  font-weight: 900;
+  margin-bottom: 20px;
 }
 
 .blog-social-links a img {
@@ -295,12 +305,41 @@ textarea {
 }
 
 .follow-title {
-  font-size: 1.5em;
+  font-size: 1.75em;
   color: #999999;
 }
 
 .follow-social-links a img {
   margin-bottom: 5px;
+}
+
+.twitter-share-button, .fb-share-button {
+  float: left;
+}
+
+.fb-share-button {
+  margin-right: 20px;
+}
+
+.fb-like {
+  margin-bottom: 20px;
+}
+
+
+/* recent posts */
+.recent-posts-title {
+  font-size: 1.75em;
+  color: #999999;
+}
+
+.recent-posts-list ul {
+  list-style-type: none;
+  padding-left: 0;
+  li {
+    font-size: 1.5em;
+    color: #0074c8;
+    margin-bottom: 10px;
+  }
 }
 
 
@@ -344,6 +383,12 @@ textarea {
 
 
 /* contact-us */
+#contact-us-top {
+  background: #337ab7;
+  color: #ffffff;
+  padding-top: 50px;
+}
+
 #contact-us {
   background: #337ab7;
   color: #ffffff;
@@ -362,14 +407,6 @@ textarea {
   color: #72bef6;
 }
 
-.contact-us-details .part1 {
-  color: #ffffff;
-}
-
-.contact-us-details .email {
-  color: #ffffff;
-}
-
 .contact-us-details .imaginear-title {
   font-size: 2em;
   color: #ffffff;
@@ -377,6 +414,11 @@ textarea {
 
 .address-details p, .phone-details p, .email-details p {
   margin-left: -30px;
+}
+
+.email-details .email a {
+  color: #ffffff;
+  text-decoration: underline;
 }
 
 .contact-us-send {

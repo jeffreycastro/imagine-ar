@@ -1,33 +1,36 @@
+.col-xs-12#contact-us-top
+  .col-sm-12.col-md-6.contact-us-form
+    .form-group.row
+      .col-md-9.col-md-offset-2{ style: "display: inline;" }
+        = image_tag("imagineAR_logo.png")
+  .pull-right{ style: "display: inline;" }
+    = link_to image_tag("top.png", class: "to-top"), ""
 .col-xs-12#contact-us
   .center.contact-us-title
-    %p{style: "display: inline;"}
+    %p{ style: "display: inline;" }
       = "GET IN TOUCH"
-    .pull-right{style: "display: inline;"}
-      = link_to image_tag("top.png", class: "to-top"), ""
 
   .row
   .col-sm-12.col-md-6.contact-us-form
     = render 'contact_us_form'
 
   .col-sm-12.col-md-6.contact-us-details
-    %p.part1
-      = "We are accepting new projects."
+    %p
+      = "We are accepting projects!"
     %br/
     %p
-      = "Tell us about your app idea, hosting inquiry, or"
+      = "Tell us about your app idea, hosting"
     %p
-      = "project quotation by sending us an email at"
-    %p.email
-      = "info@imagine-ar.com"
+      = " inquiry, or ask for a project quote."
     %br/
-    %p.imaginear-title
-      = "imagineAR"
+    %br/
+    %br/
 
     .address-details
       .row
       .col-sm-1.no-padding-left.no-padding-right
         = image_tag("location_bullet.png")
-      .col-sm-11.no-padding-left{style: "margin-bottom: 20px;"}
+      .col-sm-11.no-padding-left{ style: "margin-bottom: 20px;" }
         %p= "Lot 5 Block 17 Arquiza Street,"
         %p= "Phase 2B Ciudad Real Subdivision"
         %p= "San Jose del Monte City, Bulacan"
@@ -37,15 +40,16 @@
       .row
       .col-sm-1.no-padding-left.no-padding-right
         = image_tag("phone_bullet.png")
-      .col-sm-11.no-padding-left{style: "margin-bottom: 20px;"}
+      .col-sm-11.no-padding-left{ style: "margin-bottom: 20px;" }
         %p= "(02) 351-7393"
 
     .email-details
       .row
       .col-sm-1.no-padding-left.no-padding-right
         = image_tag("email_bullet.png")
-      .col-sm-11.no-padding-left{style: "margin-bottom: 20px;"}
-        %p.email= "info@imagine-ar.com"
+      .col-sm-11.no-padding-left{ style: "margin-bottom: 20px;" }
+        %p.email
+          = mail_to "info@imagine-ar.com"
 
 :javascript
   $('.to-top').click(function() {
