@@ -4,7 +4,5 @@
 %hr
 .recent-posts-list
   %ul
-    %li= link_to "The possible future of AR", "#"
-    %li= link_to "See you at the Techtonic 2017 Conference", "#"
-    %li= link_to "AR/VR vs. Screen-less holograms", "#"
-    %li= link_to "Thank you from iAR team", "#"
+    - @recent_blogs.each do |recent_blog|
+      %li= link_to recent_blog.title, "#"

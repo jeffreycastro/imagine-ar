@@ -2,6 +2,8 @@ class StaticPagesController < ApplicationController
   before_filter :send_email_params, only: [:send_email]
 
   def home
+    @cover_blog = Blog.cover_blog
+    @recent_blogs = Blog.recent_blogs
   end
 
   def send_email

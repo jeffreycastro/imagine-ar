@@ -1,11 +1,14 @@
 .blog-title
-  = "iAR team acquires People's Choice Award"
+  = @cover_blog.title rescue ""
+  / = "iAR team acquires People's Choice Award"
 %hr
 .center.blog-cover-image
   = image_tag("blog1.png")
 .blog-body
   %p
-    = "A team of talented Computer Science students from the University of the Philippines Diliman, and direct affiliates of imagineAR's core dev-team has acquired \"People's Choice\" Award as they finished their project in their Software Development course. These young programmers were allegedly behind building imagineAR's augmented reality app."
+    = truncate(simple_format(@cover_blog.content), escape: false, length: 340) rescue ""
+  / %p
+  /   = "A team of talented Computer Science students from the University of the Philippines Diliman, and direct affiliates of imagineAR's core dev-team has acquired \"People's Choice\" Award as they finished their project in their Software Development course. These young programmers were allegedly behind building imagineAR's augmented reality app."
   / %p
   /   = "Though they have mentioned that their journey didn't go smoothly and had their hardships at the beginning of the course. They even doubted their own aptitude and almost gave up. But with just few sleep-overs and tutorials on AR, they got the ball up and rolling."
   / %p
@@ -24,7 +27,8 @@
   / = link_to image_tag("facebook_share_btn.png"), "http://www.facebook.com/dialog/feed?app_id=416926015340372&link=http%3A%2F%2Fimagesblues.com%2F&name=name&caption=caption&description=description&redirect_uri=http%3A%2F%2Fimagesblues.com&picture=http://app-test.energyforall.asia/uploads/account_image/image/account_logo/2/thumb_energyforall_logo.png"
 .row
 %p.blog-date-posted
-  = "Posted 13 May 2017"
+  = @cover_blog.date_posted rescue ""
+  / = "Posted 13 May 2017"
 %hr.black
 
 / .center.blog-navigation
