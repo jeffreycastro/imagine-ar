@@ -1,5 +1,5 @@
 = image_tag("turtle.png", class: "turtle")
-.col-xs-12#we-are-imagineers
+.col-xs-12#we-are-imagineers.no-padding-left.no-padding-right
   .center.jumbotron
     .about-us-title
       %p{style: "display: inline;"}
@@ -15,8 +15,9 @@
       %br/
       %p
         = "Our team is comprised of industry experts with years of experience developing mobile applications, games, AR and VR. We promise to deliver high quality software and top-notch visual graphics for your app project."
-.center.contact-us.white_gray_gradient
-  = link_to "Contact Us", "#contact-us-top", class: "btn btn-lg btn-primary"
+.col-xs-12.no-padding-left.no-padding-right
+  .center.contact-us.white_gray_gradient
+    = link_to "Contact Us", "#contact-us-top", class: "btn btn-lg btn-primary"
 
 :javascript
   $('.contact-us a').click(function() {
