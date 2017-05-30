@@ -1,0 +1,14 @@
+.modal.fade{"aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1", id: "send_email_success_modal"}
+  .modal-dialog{:role => "document"}
+    .modal-content
+      .modal-header
+        %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
+          %span{"aria-hidden" => "true"} ×
+        %h4#myModalLabel.modal-title
+          %strong= "Email successfully sent"
+      .modal-body
+        %p= "Thank you for taking the time to contact us!"
+
+:javascript
+  $('#send_email_success_modal').modal('show');
+  window.history.pushState("object or string", "Title", '#{root_url}');

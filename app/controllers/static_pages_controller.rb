@@ -7,7 +7,8 @@ class StaticPagesController < ApplicationController
   end
 
   def send_email
-    # ExampleMailer.sample_email(send_email_params).deliver
+    ContactMailer.contact_email(send_email_params).deliver
+    redirect_to root_url(email_success: true)
   end
 
   private

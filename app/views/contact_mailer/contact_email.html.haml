@@ -1,0 +1,31 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}
+    :css
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      table, th, td {
+        border: 1px solid black;
+      }
+  %body
+    %h1
+      Good day!
+    %p
+      Contact requested with the following details:
+      %table
+        %tr
+          %th= "Name"
+          %td= @name rescue ""
+        %tr
+          %th= "Email"
+          %td= @email rescue ""
+        %tr
+          %th= "Company"
+          %td= @company rescue ""
+        %tr
+          %th= "Message"
+          %td= simple_format(@message) rescue ""

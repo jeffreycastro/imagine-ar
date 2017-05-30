@@ -13,3 +13,6 @@
 = render 'contact_us'
 
 = render 'partners'
+
+- if params[:email_success].present?
+  = render "email_success_modal"
