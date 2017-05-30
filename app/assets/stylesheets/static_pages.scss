@@ -281,19 +281,17 @@ textarea {
   }
 }
 
-#social_two .blog-date-posted {
+#social .blog-date-posted {
   color: #ccc;
   font-size: 1.125em;
   font-weight: 900;
-  margin-top: 50px;
+  margin-top: 20px;
+  margin-bottom: 0px;
 }
 
-#social_two hr {
+.social-abtus-separator hr {
   border-top: 1px solid #cccccc;
   border-radius: 25px;
-  &.black {
-    border-top: 1px solid #000000;
-  }
 }
 
 #blog {
