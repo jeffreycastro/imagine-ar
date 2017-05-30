@@ -53,6 +53,16 @@ textarea {
   top: -320px !important;
 }
 
+.other-header {
+  top: -160px !important;
+  background-image:    url('banner.png');
+  background-size:     cover;
+  background-repeat:   no-repeat;
+  background-position: center center;
+  height: 70px;
+  padding-top: 10px;
+}
+
 #logo {
   margin-top: 5px;
 }
@@ -296,12 +306,6 @@ textarea {
 
 .blog-social-links a img {
   margin-bottom: 5px;
-}
-
-.blog-navigation a {
-  color: #0074c8;
-  font-size: 1.125em;
-  font-weight: 900;
 }
 
 .follow-title {

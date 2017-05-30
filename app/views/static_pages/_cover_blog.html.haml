@@ -16,11 +16,11 @@
   / %p
   /   = "Other than People's Choice, they also got the \"Rockstar\" Award for the exceptional quality of their app. Let just us all hope they publish it soon."
 .readmore-link
-  = link_to "Read More >>", ""
+  = link_to "Read More >>", blog_path(@cover_blog)
 .blog-social-links
-  .fb-share-button{ "data-href" => "https://imagine-ar.herokuapp.com/", "data-layout" => "button", "data-mobile-iframe" => "true", "data-size" => "large" }
+  .fb-share-button{ "data-href" => blog_url(@cover_blog), "data-layout" => "button", "data-mobile-iframe" => "true", "data-size" => "large" }
     = link_to "Share", "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&src=sdkpreparse", target: "_blank", class: "fb-xfbml-parse-ignore"
-  = link_to "Tweet", "https://twitter.com/intent/tweet?text=Check%20this%20out!&url=https://imagine-ar.herokuapp.com/", class: "twitter-share-button", "data-size": "large"
+  = link_to "Tweet", "https://twitter.com/intent/tweet?text=Check%20this%20out!&url=#{blog_url(@cover_blog)}", class: "twitter-share-button", "data-size": "large"
   / .facebook-btn
   /   .fb-like{"data-action" => "like", "data-href" => "https://www.facebook.com/EnergyForAllInitiative", "data-layout" => "button_count", "data-share" => "true", "data-show-faces" => "false", "data-size" => "small"}
   / = link_to image_tag("twitter_tweet_btn.png"), "https://twitter.com/intent/tweet?text=thequickborwnfox%20http://www.consonantsolutions.com&lang=en", target: "_blank"
@@ -30,8 +30,3 @@
   = @cover_blog.date_posted rescue ""
   / = "Posted 13 May 2017"
 %hr.black
-
-/ .center.blog-navigation
-/   = link_to "<< Back", ""
-/   = " | "
-/   = link_to "Next >>", ""

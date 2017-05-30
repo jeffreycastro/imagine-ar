@@ -1,0 +1,54 @@
+// Place all the styles related to the blogs controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/* show page */
+#blogs_show {
+  margin-top: 100px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+#blogs_show .blog-title {
+  font-size: 1.75em;
+  font-weight: 900;
+  color: #0074c8;
+}
+
+#blogs_show .blog-cover-image {
+  margin-bottom: 30px;
+}
+
+#blogs_show p {
+  font-size: 1.125em;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+#blogs_show hr {
+  border-top: 1px solid #cccccc;
+  border-radius: 25px;
+  &.black {
+    border-top: 1px solid #000000;
+  }
+}
+
+#blogs_show .blog-date-posted {
+  color: #ccc;
+  font-size: 1.125em;
+  font-weight: 900;
+  margin-top: 50px;
+}
+
+#blogs_show .blog-navigation a {
+  color: #0074c8;
+  font-size: 1.125em;
+  font-weight: 900;
+}
+
+#blogs_show .blog-navigation .disabled {
+  color: #cccccc;
+  cursor: default;
+  text-decoration: none;
+}

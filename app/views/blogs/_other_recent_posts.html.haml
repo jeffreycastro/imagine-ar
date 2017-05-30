@@ -4,5 +4,5 @@
 %hr
 .recent-posts-list
   %ul
-    - @recent_blogs.each do |recent_blog|
+    - @other_recent_blogs.each do |recent_blog|
       %li= link_to recent_blog.title, recent_blog

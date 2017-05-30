@@ -1,23 +1,45 @@
-%nav.navbar.navbar-fixed-top{:role => "navigation"}
-  .container-fluid.header-container
-    .navbar-header
-      %button.navbar-toggle.collapsed{"data-target" => "#bs-example-navbar-collapse-6", "data-toggle" => "collapse", :type => "button"}
-        %span.sr-only Toggle navigation
-        %span.icon-bar
-        %span.icon-bar
-        %span.icon-bar
-      %a.navbar-brand#logo{:href => root_path}
-        %span= image_tag("imagineAR_logo.png")
-    #imagine-ar-navbar.collapse.navbar-collapse
-      %ul.nav.navbar-nav.navbar-right#navlinks
-        %li
-          = link_to "SERVICES", "#ar-carousel"
-        %li
-          = link_to "NEWS", "#social"
-        %li
-          = link_to "ABOUT", "#we-are-imagineers"
-        %li
-          = link_to "CONTACT", "#contact-us-top"
+- if local_assigns[:addl_navbar_class].present?
+  %nav.navbar.navbar-fixed-top{ :role => "navigation", class: addl_navbar_class }
+    .container-fluid.header-container
+      .navbar-header
+        %button.navbar-toggle.collapsed{ "data-target" => "#bs-example-navbar-collapse-6", "data-toggle" => "collapse", :type => "button" }
+          %span.sr-only Toggle navigation
+          %span.icon-bar
+          %span.icon-bar
+          %span.icon-bar
+        %a.navbar-brand#logo{ :href => root_path }
+          %span= image_tag("imagineAR_logo.png")
+      #imagine-ar-navbar.collapse.navbar-collapse
+        %ul.nav.navbar-nav.navbar-right#navlinks
+          %li
+            = link_to "SERVICES", "#{root_url}#ar-carousel"
+          %li
+            = link_to "NEWS", "#{root_url}#social"
+          %li
+            = link_to "ABOUT", "#{root_url}#we-are-imagineers"
+          %li
+            = link_to "CONTACT", "#{root_url}#contact-us-top"
+- else
+  %nav.navbar.navbar-fixed-top{ :role => "navigation" }
+    .container-fluid.header-container
+      .navbar-header
+        %button.navbar-toggle.collapsed{ "data-target" => "#bs-example-navbar-collapse-6", "data-toggle" => "collapse", :type => "button" }
+          %span.sr-only Toggle navigation
+          %span.icon-bar
+          %span.icon-bar
+          %span.icon-bar
+        %a.navbar-brand#logo{ :href => root_path }
+          %span= image_tag("imagineAR_logo.png")
+      #imagine-ar-navbar.collapse.navbar-collapse
+        %ul.nav.navbar-nav.navbar-right#navlinks
+          %li
+            = link_to "SERVICES", "#ar-carousel"
+          %li
+            = link_to "NEWS", "#social"
+          %li
+            = link_to "ABOUT", "#we-are-imagineers"
+          %li
+            = link_to "CONTACT", "#contact-us-top"
 
 :javascript
   var $root = $('html, body');

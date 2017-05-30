@@ -1,0 +1,36 @@
+#blogs_show
+  .col-xs-12
+    = render partial: 'layouts/header', locals: {addl_navbar_class: "other-header"}
+    .col-xs-12.col-md-8
+      .blog-title
+        = @blog.title rescue ""
+      %hr
+      .center.blog-cover-image
+        = image_tag("blog1.png")
+      .blog-body
+        %p
+          = simple_format(@blog.content) rescue ""
+      .blog-social-links
+        .fb-share-button{ "data-href" => blog_url(@blog), "data-layout" => "button", "data-mobile-iframe" => "true", "data-size" => "large" }
+          = link_to "Share", "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&src=sdkpreparse", target: "_blank", class: "fb-xfbml-parse-ignore"
+        = link_to "Tweet", "https://twitter.com/intent/tweet?text=Check%20this%20out!&url=#{blog_url(@blog)}", class: "twitter-share-button", "data-size": "large"
+      .row
+      %p.blog-date-posted
+        = @blog.date_posted rescue ""
+      %hr
+
+      .center.blog-navigation
+        = link_to "<< Previous", @blog.previous_blog, disabled: @blog.previous_blog.nil?, class: "#{@blog.previous_blog.nil? ? 'disabled' : ''}"
+        = " | "
+        = link_to "Next >>", @blog.next_blog, disabled: @blog.next_blog.nil?, class: "#{@blog.next_blog.nil? ? 'disabled' : ''}"
+
+    .col-xs-12.col-md-4#follow
+      = render partial: "static_pages/like_and_follow"
+      = render partial: "blogs/other_recent_posts"
+
+:javascript
+  $(document).ready(function() {
+    $('a[disabled=disabled]').click(function(event){
+        event.preventDefault();
+    });
+  });
