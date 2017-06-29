@@ -3,7 +3,8 @@ class StaticPagesController < ApplicationController
 
   def home
     @cover_blog = Blog.cover_blog
-    @recent_blogs = Blog.recent_blogs
+    @cover_blog = Blog.order('updated_at desc').first if @cover_blog.nil?
+    @recent_blogs = Blog.all_active.recent_blogs
   end
 
   def send_email
