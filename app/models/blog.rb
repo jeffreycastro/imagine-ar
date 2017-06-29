@@ -12,11 +12,11 @@ class Blog < ApplicationRecord
   end
 
   def previous_blog
-    self.class.where("created_at < ?", created_at).order(created_at: :asc).last
+    self.class.all_active.where("created_at < ?", created_at).order(created_at: :asc).last
   end
 
   def next_blog
-    self.class.where("created_at > ?", created_at).order(created_at: :asc).first
+    self.class.all_active.where("created_at > ?", created_at).order(created_at: :asc).first
   end
 
   def deactivate
