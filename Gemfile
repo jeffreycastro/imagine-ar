@@ -61,3 +61,6 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'rails-assets-jquery-validation', source: 'https://rails-assets.org'
+
+gem 'simple_form'
+gem 'kaminari'

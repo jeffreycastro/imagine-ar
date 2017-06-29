@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  root 'static_pages#home'
+
   resources :static_pages, only: [], path: '/' do
     collection do
       get :home
@@ -6,8 +8,14 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :blogs
+  resources :blogs, only: :show
 
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  root 'static_pages#home'
+  namespace :admin do
+    resources :blogs do
+      member do
+        put :activate
+        put :deactivate
+      end
+    end
+  end
 end

@@ -1,0 +1,21 @@
+/* admin blogs page */
+#blogs_admin {
+  margin-top: 100px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+#blogs_admin .blog-title {
+  font-size: 1.75em;
+  font-weight: 900;
+  color: #0074c8;
+}
+
+#blogs_admin hr {
+  border-top: 1px solid #cccccc;
+  border-radius: 25px;
+  &.black {
+    border-top: 1px solid #000000;
+  }
+}

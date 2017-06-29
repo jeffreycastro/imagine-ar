@@ -1,0 +1,34 @@
+#blogs_admin
+  .col-xs-12
+    = render partial: 'layouts/header', locals: {addl_navbar_class: "other-header"}
+    = render 'layouts/messages'
+    .col-xs-12.col-md-12
+      .blog-title
+        = "Blogs index"
+      %br/
+      = link_to "Create Blog", new_admin_blog_path, class: "btn btn-primary btn-md"
+      %hr
+      .table-responsive
+        %table.table.table-bordered.table-hover.table-striped
+          %thead
+            %tr
+              %th= "Title"
+              %th= "Created At"
+              %th= "Last Updated At"
+              %th= "Actions"
+          %tbody
+            - @blogs.each do |blog|
+              %tr
+                %td{ title: blog.title }= blog.title.truncate(100)
+                %td= blog.created_at.strftime("%B %d, %Y %H:%M:%S")
+                %td= blog.updated_at.strftime("%B %d, %Y %H:%M:%S")
+                %td
+                  = link_to "Show", admin_blog_path(blog), class: "btn btn-primary btn-xs"
+                  = link_to "Edit", edit_admin_blog_path(blog), class: "btn btn-primary btn-xs"
+                  - if blog.is_active
+                    = link_to "Hide", deactivate_admin_blog_path(blog), method: :put, class: "btn btn-primary btn-xs", data: { confirm: "This will hide this blog from public viewing. Are you sure?" }
+                  - else
+                    = link_to "Show", activate_admin_blog_path(blog), method: :put, class: "btn btn-primary btn-xs", data: { confirm: "This will show this blog from public viewing. Are you sure?" }
+                  = link_to "Delete", admin_blog_path(blog), method: :delete, class: "btn btn-primary btn-xs", data: { confirm: "This will completely remove this blog. Are you sure?" }
+      = paginate @blogs
+      = page_entries_info @blogs
