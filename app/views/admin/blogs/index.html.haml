@@ -19,7 +19,10 @@
           %tbody
             - @blogs.each do |blog|
               %tr
-                %td{ title: blog.title }= blog.title.truncate(100)
+                %td{ title: blog.title }
+                  - if blog.is_cover
+                    %i.glyphicon.glyphicon-star{ style: "cursor: pointer;", title: "Cover blog" }
+                  = blog.title.truncate(100)
                 %td= blog.created_at.strftime("%B %d, %Y %H:%M:%S")
                 %td= blog.updated_at.strftime("%B %d, %Y %H:%M:%S")
                 %td

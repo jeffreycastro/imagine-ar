@@ -20,6 +20,7 @@ class Admin::BlogsController < ApplicationController
 
     respond_to do |format|
       if @blog.save
+        Blog.reset_other_cover_blog(@blog.id) if @blog.is_cover
         format.html { redirect_to admin_blog_url(@blog), notice: "Blog was successfully created" }
         format.json { render :show, status: :created, location: @blog }
       else
@@ -32,6 +33,7 @@ class Admin::BlogsController < ApplicationController
   def update
     respond_to do |format|
       if @blog.update(blog_params)
+        Blog.reset_other_cover_blog(@blog.id) if @blog.is_cover
         format.html { redirect_to admin_blog_url(@blog), notice: "#{@blog.title} was successfully updated" }
         format.json { render :show, status: :ok, location: @blog }
       else

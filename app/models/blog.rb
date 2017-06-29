@@ -26,4 +26,10 @@ class Blog < ApplicationRecord
   def activate
     update_attribute(:is_active, true)
   end
+
+  def self.reset_other_cover_blog(new_cover_blog_id)
+    other_cover_blog = Blog.where(is_cover: true).where.not(id: new_cover_blog_id).first
+    return if other_cover_blog.nil?
+    other_cover_blog.update_attribute(:is_cover, false)
+  end
 end
