@@ -10,3 +10,10 @@ default:
     - preview
     - media
   fontsize_formats: '12pt 14pt 18pt 24pt 36pt'
+  setup:
+    function(ed) {
+      ed.on('init', function()
+      {
+          this.getDoc().body.style.fontSize = '12pt';
+      });
+    }
