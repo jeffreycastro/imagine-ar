@@ -1,6 +1,9 @@
 .blog-title
   = @cover_blog.title rescue ""
 %hr
+- if @cover_blog.cover_image.present?
+  .center.blog-cover-image
+    = image_tag(@cover_blog.cover_image.url)
 .blog-body
   %p
     = truncate(strip_tags(@cover_blog.content.html_safe), escape: false, length: 340) rescue ""

@@ -1,4 +1,6 @@
 class Blog < ApplicationRecord
+  mount_uploader :cover_image, CoverImageUploader
+
   scope :cover_blog, -> { where(is_cover: true).first }
   scope :recent_blogs, -> { where(is_cover: false).select(:id, :title).last(8) }
   scope :other_recent_blogs, -> (curr_id = nil) { where.not(id: curr_id).select(:id, :title).last(8) }

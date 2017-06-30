@@ -11,6 +11,9 @@
       = link_to "Edit this blog", edit_admin_blog_path(@blog), class: "btn btn-primary"
       = link_to "Blogs Index Page", admin_blogs_path, class: "btn btn-primary"
       %hr
+      - if @blog.cover_image.present?
+        .center.blog-cover-image
+          = image_tag(@blog.cover_image.url)
       .blog-body
         = raw @blog.content.html_safe rescue ""
       %p.blog-date-posted

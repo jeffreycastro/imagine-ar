@@ -5,6 +5,9 @@
       .blog-title
         = @blog.title rescue ""
       %hr
+      - if @blog.cover_image.present?
+        .center.blog-cover-image
+          = image_tag(@blog.cover_image.url)
       .blog-body
         = raw @blog.content.html_safe rescue ""
       .blog-social-links

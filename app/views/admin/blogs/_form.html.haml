@@ -3,9 +3,15 @@
     .panel-body
       .col-md-12
         .form-group
-          = f.input :title, placeholder: "Blog Title"
-          = f.input :content,  placeholder: "Blog Content", input_html: { rows: 10, class: "tinymce" }
           = f.input :is_cover, label: "Set as cover blog"
+        .form-group
+          = f.input :title, placeholder: "Blog Title"
+        .form-group
+          = f.input :content,  placeholder: "Blog Content", input_html: { rows: 10, class: "tinymce" }
+        .form-group
+          = f.input :cover_image, as: :file
+          - if f.object.cover_image.present?
+            = image_tag(f.object.cover_image.large_thumb.url)
 
       .col-md-12
         .form-group

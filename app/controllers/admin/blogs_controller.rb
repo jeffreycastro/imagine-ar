@@ -74,7 +74,8 @@ class Admin::BlogsController < ApplicationController
     params.require(:blog).permit(
       :title,
       :content,
-      :is_cover
+      :is_cover,
+      :cover_image
     )
   end
 
