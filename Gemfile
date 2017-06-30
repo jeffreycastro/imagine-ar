@@ -64,3 +64,4 @@ gem 'rails-assets-jquery-validation', source: 'https://rails-assets.org'
 
 gem 'simple_form'
 gem 'kaminari'
+gem 'tinymce-rails'

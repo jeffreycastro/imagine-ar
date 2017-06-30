@@ -5,11 +5,8 @@
       .blog-title
         = @blog.title rescue ""
       %hr
-      .center.blog-cover-image
-        = image_tag("blog1.png")
       .blog-body
-        %p
-          = simple_format(@blog.content) rescue ""
+        = raw @blog.content.html_safe rescue ""
       .blog-social-links
         .fb-share-button{ "data-href" => blog_url(@blog), "data-layout" => "button", "data-mobile-iframe" => "true", "data-size" => "large" }
           = link_to "Share", "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&src=sdkpreparse", target: "_blank", class: "fb-xfbml-parse-ignore"

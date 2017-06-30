@@ -1,11 +1,9 @@
 .blog-title
   = @cover_blog.title rescue ""
 %hr
-.center.blog-cover-image
-  = image_tag("blog1.png")
 .blog-body
   %p
-    = truncate(simple_format(@cover_blog.content), escape: false, length: 340) rescue ""
+    = truncate(strip_tags(@cover_blog.content.html_safe), escape: false, length: 340) rescue ""
 .readmore-link
   = link_to "Read More >>", blog_path(@cover_blog)
 .blog-social-links

@@ -1,0 +1,12 @@
+default:
+  toolbar:
+    - undo redo | bullist numlist | indent outdent aligncenter | preview
+    - image link media | bold italic underline | fontsizeselect fontselect | forecolor
+  plugins:
+    - image
+    - link
+    - textcolor colorpicker
+    - lists
+    - preview
+    - media
+  fontsize_formats: '8pt 10pt 12pt 14pt 18pt 24pt 36pt'

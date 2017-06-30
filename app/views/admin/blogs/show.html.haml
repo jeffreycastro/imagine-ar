@@ -11,11 +11,8 @@
       = link_to "Edit this blog", edit_admin_blog_path(@blog), class: "btn btn-primary"
       = link_to "Blogs Index Page", admin_blogs_path, class: "btn btn-primary"
       %hr
-      .center.blog-cover-image
-        = image_tag("blog1.png")
       .blog-body
-        %p
-          = simple_format(@blog.content) rescue ""
+        = raw @blog.content.html_safe rescue ""
       %p.blog-date-posted
         = @blog.date_posted rescue ""
       %hr
