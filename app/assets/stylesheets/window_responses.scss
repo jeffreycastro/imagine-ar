@@ -13,7 +13,119 @@
   }
 }
 
+@media (max-width: 1366px) {
+  /* header */
+  .navbar-fixed-top {
+    position: absolute !important;
+    top: -290px !important;
+  }
+
+  #blogs_show .navbar-fixed-top {
+    position: absolute !important;
+    top: -165px !important;
+  }
+
+  /* contact-us */
+  .address-details p, .phone-details p, .email-details p {
+    margin-left: -10px;
+  }
+}
+
+@media (max-width: 1024px) {
+  /* header */
+  #learnmore {
+    height: 800px;
+  }
+
+  .navbar-fixed-top {
+    position: absolute !important;
+    top: -140px !important;
+  }
+
+  /* about us */
+  .about-us-title p {
+    font-size: 4em !important;
+  }
+
+  .about-us-title .imagineers {
+    font-size: 4em !important;
+  }
+
+  .about-us-body {
+    margin-top: 80px !important;
+    margin-bottom: 0px !important;
+  }
+
+  /* contact-us */
+  .address-details p, .phone-details p, .email-details p {
+    margin-left: 0px;
+  }
+}
+
+@media (max-width: 800px) {
+  /* header */
+  .navbar-fixed-top {
+    position: absolute !important;
+    top: -210px !important;
+  }
+
+  #learnmore {
+    height: 800px;
+  }
+
+  #learnmore h1 {
+    font-size: 3.25em;
+  }
+
+  .learnmore-link {
+    font-size: 1.5em !important;
+    padding: 20px 20px 20px 20px !important;
+  }
+
+  /* carousel */
+  #ar-carousel .carousel-caption-title {
+    font-size: 1.5em;
+  }
+
+  #ar-carousel .carousel-caption-desc {
+    font-size: 1em;
+  }
+
+  /* blog */
+  #social .blog-date-posted {
+    margin-bottom: 30px;
+  }
+
+  .blog-navigation {
+    margin-bottom: 50px;
+  }
+
+  #follow {
+    border-left: none;
+    padding-left: 15px;
+  }
+
+  /* imagineers */
+  .about-us-title p {
+    font-size: 3em !important;
+  }
+
+  .about-us-title .imagineers {
+    font-size: 3em !important;
+  }
+
+  .about-us-body p {
+    font-size: 1.25em !important;
+  }
+
+  /* contact-us */
+  .contact-us a {
+    font-size: 1.5em;
+  }  
+}
+
 @media (max-width: 768px) {
+  /* header */
   .footer .contact {
     float: none;
     padding-top: 5px;
@@ -36,6 +148,7 @@
     font-size: 1.5em !important;
   }
 
+  /* carousel */
   #ar-carousel {
     height: 400px;
   }
@@ -44,40 +157,101 @@
     font-size: 1.5em;
   }
 
-  .weare h1 {
-    font-size: 1.5em;
-  }
-
-  .whatwedo-title h1 {
-    font-size: 2.5em;
-  }
-
-  #social {
-    height: 320px;
-  }
-
+  /* blog */
   #social p {
     font-size: 1.5em;
   }
+}
 
-  .augreality-title h1 {
-    font-size: 3em;
+@media (max-width: 600px) {
+  /* header */
+  .other-header {
+    height: 120px;
   }
 
-  #media-div {
-    height: auto;
-    padding-bottom: 50px;
+  .navbar-fixed-top {
+    position: absolute !important;
+    top: -15px !important;
   }
 
-  #media-desc-div p {
+  .navbar-collapse {
+    box-shadow: none !important;
+  }
+
+  .navbar-toggle {
+    background-color: #fff !important;
+  }
+
+  .navbar-toggle .icon-bar {
+    background-color: #337ab7 ! important;
+  }
+
+  .navbar-default .navbar-collapse {
+    border-top: none !important;
+  }
+
+  .learnmore-title h1 {
+    font-size: 2em !important;
+    margin-top: 80px;
+  }
+
+  #navlinks > li > a {
+    font-size: 1em;
+    color: #fff;
+  }
+
+  #imagine-ar-navbar {
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    li {
+      float: left;
+    }
+
+    li a {
+      display: block;
+      text-align: center;
+      text-decoration: none;
+    }
+  }
+
+  /* ar carousel */
+  #ar-carousel {
+    margin-top: 30px;
+  }
+
+  /* blog */
+  .blog-title {
     font-size: 1.5em;
   }
 
-  .yt-video {
-    position: absolute;
-    top: 5%;
-    left: 0%;
-    width: 100%;
-    height: 100%;
+  .follow-title {
+    font-size: 1.5em;
+  }
+
+  .recent-posts-title {
+    font-size: 1.5em;
+  }
+
+  #social p {
+    font-size: 1.125em;
+  }
+
+  /* imagineers */
+  .about-us-title p {
+    font-size: 2.75em !important;
+  }
+
+  .about-us-title .imagineers {
+    font-size: 2.75em !important;
+  }
+
+  /* footer */
+  .footer .copyright p {
+    font-size: 1.5em;
   }
 }
