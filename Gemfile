@@ -67,3 +67,5 @@ gem 'kaminari'
 gem 'tinymce-rails'
 gem 'mini_magick'
 gem 'carrierwave', '~> 1.0'
+
+gem 'friendly_id', '~> 5.1.0'
