@@ -71,6 +71,22 @@ textarea {
   padding-top: 10px;
 }
 
+.navbar-collapse {
+  box-shadow: none !important;
+}
+
+.navbar-toggle {
+  background-color: #fff !important;
+}
+
+.navbar-toggle .icon-bar {
+  background-color: #337ab7 ! important;
+}
+
+.navbar-default .navbar-collapse {
+  border-top: none !important;
+}
+
 #logo {
   margin-top: 5px;
 }

@@ -13,6 +13,13 @@
   }
 }
 
+@media (max-width: 1460px) {
+  /* contact-us */
+  .address-details p, .phone-details p, .email-details p {
+    margin-left: -20px;
+  }
+}
+
 @media (max-width: 1366px) {
   /* header */
   .navbar-fixed-top {
@@ -30,9 +37,18 @@
     top: -160px !important;
   }
 
+  /* about us */
+  .about-us-title p {
+    font-size: 4em !important;
+  }
+
+  .about-us-title .imagineers {
+    font-size: 4em !important;
+  }
+
   /* contact-us */
   .address-details p, .phone-details p, .email-details p {
-    margin-left: -10px;
+    margin-left: 0px;
   }
 }
 
@@ -64,6 +80,19 @@
   /* contact-us */
   .address-details p, .phone-details p, .email-details p {
     margin-left: 0px;
+  }
+}
+
+@media (max-width: 980px) {
+  /* blog */
+  #follow {
+    border-left: none;
+    padding-left: 15px;
+  }
+
+  /* contact-us */
+  .address-details p, .phone-details p, .email-details p {
+    margin-left: -20px;
   }
 }
 
@@ -131,9 +160,32 @@
 
 @media (max-width: 768px) {
   /* header */
-  .footer .contact {
-    float: none;
-    padding-top: 5px;
+  .navbar-fixed-top {
+    position: absolute !important;
+    top: 0px !important;
+  }
+
+  #imagine-ar-navbar {
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    li {
+      float: left;
+    }
+
+    li a {
+      display: block;
+      text-align: center;
+      text-decoration: none;
+    }
+  }
+
+  .other-header {
+    min-height: 120px !important;
   }
 
   .header-container h3 {
@@ -147,6 +199,7 @@
 
   .learnmore-title h1 {
     font-size: 3em;
+    margin-top: 80px;
   }
 
   .learnmore-link {
@@ -155,7 +208,7 @@
 
   /* carousel */
   #ar-carousel {
-    height: 400px;
+    height: 470px;
   }
 
   #ar-carousel p {
@@ -165,6 +218,25 @@
   /* blog */
   #social p {
     font-size: 1.5em;
+  }
+
+  /* contact-us */
+  .address-details p, .phone-details p, .email-details p {
+    margin-left: 0px;
+  }
+
+  .blog-social-links {
+    margin-top: 20px;
+  }
+
+  /* footer */
+  .footer .copyright p {
+    font-size: 1.5em !important;
+  }
+
+  .footer .contact {
+    float: none;
+    padding-top: 5px;
   }
 }
 
@@ -177,22 +249,6 @@
   .navbar-fixed-top {
     position: absolute !important;
     top: -15px !important;
-  }
-
-  .navbar-collapse {
-    box-shadow: none !important;
-  }
-
-  .navbar-toggle {
-    background-color: #fff !important;
-  }
-
-  .navbar-toggle .icon-bar {
-    background-color: #337ab7 ! important;
-  }
-
-  .navbar-default .navbar-collapse {
-    border-top: none !important;
   }
 
   .learnmore-title h1 {
@@ -258,5 +314,102 @@
   /* footer */
   .footer .copyright p {
     font-size: 1.5em;
+  }
+}
+
+@media (max-width: 450px) /* for some android portrait sizes */
+{
+  /* header */
+  #navlinks > li > a {
+    font-size: 0.7em;
+    color: #fff;
+  }
+
+  /* about-us */
+  #about-us {
+    .about-us-title p {
+      font-size: 2em !important;
+    }
+
+    .about-us-title .imagineers {
+      font-size: 2em !important;
+    }
+
+    .about-us-body {
+      margin-top: 50px !important;
+      margin-bottom: 0px !important;
+    }
+  }
+
+  /* contact-us */
+  #contact-us {
+    .address-details p, .phone-details p, .email-details p {
+      margin-left: 10px;
+    }
+  }
+}
+
+@media (max-width: 400px) /* for some smaller android portrait sizes */
+{
+  /* header */
+  .navbar-fixed-top {
+    position: absolute !important;
+    top: 10px !important;
+  }
+
+  #navlinks > li > a {
+    font-size: 0.6em;
+  }
+
+  .learnmore-title h1 {
+    font-size: 1.75em !important;
+    margin-top: 110px;
+  }
+
+  .learnmore-link {
+    font-size: 1.25em !important;
+  }
+
+  /* about us */
+  #about-us {
+    .jumbotron p {
+      margin-bottom: 0px;
+    }
+
+    .about-us-title p {
+      font-size: 2em !important;
+    }
+
+    .about-us-title .imagineers {
+      font-size: 2em !important;
+    }
+
+    .about-us-body {
+      margin-top: 30px !important;
+    }
+  }
+
+  /* contact us */
+  #contact-us {
+    .address-details p, .phone-details p, .email-details p {
+      margin-left: 15px;
+    }
+  }
+
+  /* footer */
+  .footer .copyright p {
+    font-size: 1em !important;
+  }
+}
+
+@media (max-width: 340px) /* for iphone 5s portrait */
+{
+  /* header */
+  .container > .navbar-header,
+  .container > .navbar-collapse,
+  .container-fluid > .navbar-header,
+  .container-fluid > .navbar-collapse {
+    margin-right: -35px !important;
+    margin-left: -35px !important;
   }
 }
